@@ -1,14 +1,5 @@
 <template>
   <div id="#app">
-    
-
-      
-    <div id="nav">
-    <router-link to="/about">About</router-link>
-    <router-link to="/profile">Profile</router-link>
-  </div>
-  <router-view/>
-
 
     <AppNavbar @search="search"/>
     <!-- <p style="font-weight:bold"><span style="color:red">{{items}}</span>,</p>
@@ -25,13 +16,7 @@
         </div>
      </div>
 
-
-   
-
-
-
   </div>
-
 
   </div>
   
