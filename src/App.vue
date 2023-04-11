@@ -1,7 +1,7 @@
 <template>
   <router-view />
-  <router-link  :to="{ name: 'smallOne' }">Compo1</router-link> |
-  <router-link  :to="{ name: 'smallTwo' }">Compo2</router-link> 
+  <!-- <router-link  :to="{ name: 'smallOne' }">Compo1</router-link> |
+  <router-link  :to="{ name: 'smallTwo' }">Compo2</router-link>  -->
   <div id="#app">
 
     <AppNavbar @search="search"/>

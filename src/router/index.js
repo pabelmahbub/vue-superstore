@@ -22,6 +22,11 @@ const router = createRouter({
             component: ()=> import ("../components/AboutCar")
         },
         {
+            path:'/posts/:id',
+            name:'itemDetails',
+            component: ()=> import ("../components/ItemDetails")
+        },
+        {
             path:'/:catchAll(.*)',
             name:'NotFound',
             component: NotFound
