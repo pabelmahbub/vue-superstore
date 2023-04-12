@@ -4,11 +4,11 @@
             <router-link  :to="{path: '/item/' + item.id}">
                <img :src="item.photo" alt="jjj" class="card-img-top" style="height:13rem; width:100%;object-fit:cover;">
             
-            <a @click="addToCart(item)" class="btn btn-warning" style="width:80px;margin-top:-17px;margin-left: 10px;">+ Add</a>
+            <a  class="btn btn-warning" style="width:80px;margin-top:-17px;margin-left: 10px;">+ Add</a>
             <div class="card-body">
                 <h3 class="card-text">{{item.title}}</h3>
                 <p class="card-text" style="font-size:14px">{{item.description}}</p>
-                <p class="card-text">${{item.price}}</p>
+                <p @click="addToCart(item)" class="card-text">$999</p>
             </div>
 
         </router-link>
@@ -32,7 +32,10 @@ export default {
     },
     methods: {
         addToCart(item){
-            this.$emit('newItemAdded', item)
+            //this.$emit('newItemAdded', item)
+            this.$store.commit("addToCart", item)
+            {console.log('cart', item)}
+
         },
         fetchInventory(){
             var self = this;
